@@ -1,10 +1,5 @@
-{ 
-
-    "body":{ 
-
-        "obtenerDatosResponse":{ 
-
-            "respuesta":{ 
+{
+     "respuesta":{ 
 
                 "apellido":"string", 
 
@@ -15,9 +10,4 @@
                 "mensaje":"string" 
 
             } 
-
-        } 
-
-    } 
-
 } 
