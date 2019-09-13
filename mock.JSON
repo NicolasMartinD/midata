@@ -1,13 +1,12 @@
 {
-     "respuesta":{ 
 
-                "apellido":"string", 
+  "apellido":"string", 
 
-                "nombres":"string", 
+  "nombres":"string", 
 
-                "fechaNacimiento":"string", 
+  "fechaNacimiento":"string", 
 
-                "mensaje":"string" 
+  "mensaje":"string" 
 
-            } 
+
 } 
