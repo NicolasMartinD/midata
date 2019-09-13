@@ -1,0 +1,114 @@
+.marco{
+    display: block;
+    margin: 3rem;
+    margin-left: 6rem;
+    margin-right: 6rem;
+    align-self: center;
+    size: 60%;
+    background: white;
+    border-radius: 6px;
+}
+
+.head{
+    background: rgb(230, 230, 230);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    margin-bottom: 0;
+    text-justify: distribute;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    height: 50px;
+}
+
+.bottom{
+    height: 0.5px;
+    color: gray;
+    margin: 0;
+}
+
+.linea{
+    display: inline-flex;
+    justify-content: space-between;
+    align-content: center;
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+.socket0{
+    width: 50%
+}
+.socket1{
+    width: 50%
+}
+.socket2{
+    width: 25%;
+}
+.socket3{
+    width: 25%;
+}
+.socket4{
+    width: 50%;
+}
+.socket5{
+    width: 50%
+}
+.socket6{
+    width: 50%
+}
+.button{
+    background: rgb(255, 238, 0);
+    color: rgba(0, 0, 0, 0.767);
+    width: 85px;
+    height: 30px;
+    border-radius: 4px;
+}
+
+.search{
+    display: inline-flex;
+    margin-right: 1.5rem;
+    height: 1.5rem;
+    width: 50%;
+    border-radius: 4px;
+}
+
+.lineafinal{
+    height: 3rem;
+    margin-top: 2rem;
+    width: 100%;
+    align-content: center;
+    justify-content: right;
+}
+.button2{
+    float: right;
+    background: rgb(255, 238, 0);
+    color: rgba(0, 0, 0, 0.767);
+    width: 85px;
+    height: 30px;
+    border-radius: 4px;
+    margin-right: 1.3rem;
+}
+
+.title{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+}
+
+.selector{
+    border-radius: 4px;
+    height: 1.7rem;
+    color: gray;
+}
+
+ table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+ th, td {
+    text-align: left;
+    padding: 8px;
+  }
+  
+ tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+

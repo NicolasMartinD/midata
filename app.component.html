@@ -1,0 +1,95 @@
+<header>
+    <app-header></app-header>
+</header>
+<body class="marco">
+    <header>
+        <h1 class="head">Datos de visitas</h1>
+    </header>
+    <hr class="bottom">
+    <form [formGroup]="signupForm" (ngSubmit)="registrarFormulario(signupForm.value)">
+        <div class="general">
+            <div class="linea">
+                <div class="socket0">
+                    <h2 class="title">DNI</h2>
+                        <input class="search" type="number" placeholder="Ingrese DNI" formControlName="dni">
+                        <button type="button" (click)="consultaRenaper(signupForm.value.dni)" class="button">Consultar</button>
+                        <div class="log" *ngIf="signupForm.get('dni').hasError('required') && signupForm.get('dni').touched">
+                            Por favor, introduzca su DNI.
+                        </div>
+                        <div class="log" *ngIf="signupForm.get('dni').hasError('compose') && signupForm.get('dni'). touched">
+                            DNI invalido.
+                        </div>
+                </div>
+                <div class="socket1">
+                    <h2 class="title">Nombre y apellido</h2>
+                    <p class="title"> {{personas.nombres}} {{personas.apellido}} </p>
+                </div>
+            </div>
+            <hr class="bottom">
+            <div class="linea">
+                <div class="socket2">
+                    <h2 class="title">Nro. de tarjeta de ingreso</h2>
+                    <input class="search" type="number" placeholder="Ingrese numero" formControlName="tarjeta">
+                    <div class="log" *ngIf="signupForm.get('tarjeta').hasError('required') && signupForm.get('tarjeta').touched">
+                        Por favor, introduzca el numero de su Tarjeta de Ingreso.
+                    </div>
+                </div>
+                <div class="socket3">
+                    <h2 class="title">Fecha de Ingreso</h2>
+                    <p>{{ myTime | date: "dd/MM/yyyy" }}</p>
+                </div>
+                <div class="socket4">
+                    <h2 class="title">Hora de Ingreso</h2>
+                    <p>{{ myTime | date: "hh:mm" }}</p>
+                </div>
+            </div>
+            <div class="linea">
+                <div class="socket5">
+                    <h2 class="title">Visita a:</h2>
+                    <select class="selector" name="empleado" formControlName="empleado">
+                        <option value="">Selecione a la persona visitada</option>
+                        <optgroup>----------------------------------</optgroup>
+                        <option value="{{empleado.id_empleado}}" *ngFor="let empleado of empleados">{{ empleado.nombre_empleado }} {{ empleado.apellido_empleado }}</option>
+                    </select>
+                    <div class="log" *ngIf="signupForm.get('empleado').hasError('required') && signupForm.get('empleado').touched">
+                        Por favor, seleccione una opcion.
+                    </div>
+                </div>
+                <div class="socket6">
+                    <h2 class="title">Sector:</h2>
+                    <select class="selector" name="sector" formControlName="sector">
+                        <option value="">Selecione sector de la persona visitada</option>
+                        <optgroup>-------------------------------------</optgroup>
+                        <option value="{{sector.id_sector}}" *ngFor="let sector of sectores">{{ sector.nombre_sector }}</option>
+                    </select>
+                    <div class="log" *ngIf="signupForm.get('sector').hasError('required') && signupForm.get('sector').touched">
+                        Por favor, seleccione una opcion.
+                    </div>
+                </div>
+            </div>
+            <div class="lineafinal">
+                <button class="button2" [disabled]="signupForm.invalid" type="submit">Ingresar</button>
+            </div>
+        </div>
+    </form>
+</body>
+<footer class="marco">
+    <h1 class="head">Historial de la visita</h1>
+    <table>
+        <ng-template #sinvisita><p>No hay visitas registradas en su historial.</p></ng-template>
+            <tr>
+              <td>#</td><td>Visitante</td><td>Fecha</td><td>Id. Empleado</td>
+            </tr>
+            <tr *ngFor="let historia of historial">
+              <td>{{historia.nro_entrada}}</td>
+              <td>{{historia.id_dni}}</td>
+              <td>{{historia.fecha}}</td>
+              <td>{{historia.id_empleado}}</td>        
+            </tr>
+          </table>
+</footer>
+
+
+
+
+
