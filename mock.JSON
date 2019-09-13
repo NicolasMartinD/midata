@@ -1,0 +1,23 @@
+{ 
+
+    "body":{ 
+
+        "obtenerDatosResponse":{ 
+
+            "respuesta":{ 
+
+                "apellido":"string", 
+
+                "nombres":"string", 
+
+                "fechaNacimiento":"string", 
+
+                "mensaje":"string" 
+
+            } 
+
+        } 
+
+    } 
+
+} 
